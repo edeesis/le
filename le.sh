@@ -848,7 +848,7 @@ issue() {
     done
     
   done
-
+  _clearupwebbroot "$Le_Webroot" 1
   _clearup
   _info "Verify finished, start to sign."
   der="$(openssl req  -in $CSR_PATH -outform DER | _base64 | _b64)"
